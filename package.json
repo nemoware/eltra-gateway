@@ -8,10 +8,13 @@
     "node_modules"
   ],
   "dependencies": {
+    "@angular/animations": "8.2.14",
+    "@angular/cdk": "~8.2.3",
     "@angular/common": "8.2.14",
     "@angular/compiler": "8.2.14",
     "@angular/core": "8.2.14",
     "@angular/forms": "8.2.14",
+    "@angular/material": "^8.2.3",
     "@angular/platform-browser": "8.2.14",
     "@angular/platform-browser-dynamic": "8.2.14",
     "@angular/router": "8.2.14",
@@ -30,10 +33,10 @@
     "ngx-infinite-scroll": "8.0.1",
     "ngx-webstorage": "4.0.1",
     "rxjs": "6.5.3",
-    "swagger-ui-dist": "3.24.3",
     "sockjs-client": "1.4.0",
-    "webstomp-client": "1.2.6",
+    "swagger-ui-dist": "3.24.3",
     "tslib": "1.10.0",
+    "webstomp-client": "1.2.6",
     "zone.js": "0.10.2"
   },
   "devDependencies": {

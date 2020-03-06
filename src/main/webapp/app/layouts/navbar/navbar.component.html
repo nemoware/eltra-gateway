@@ -1,6 +1,10 @@
-<nav class="navbar navbar-dark navbar-expand-md bg-primary">
+<!--<nav class="navbar navbar-light navbar-expand-md bg-light">-->
+<mat-toolbar color="primary" class="navbar navbar-dark navbar-expand-md bg-dark">
+    <button mat-icon-button (click)="snavpanel.toggle()"><mat-icon>menu</mat-icon></button>
+
+    <span>  </span>
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
-        <span class="logo-img"></span>
+<!--        <span class="logo-img"></span>-->
         <span jhiTranslate="global.title" class="navbar-title">EltraGateway</span> <span class="navbar-version">{{ version }}</span>
     </a>
     <a class="navbar-toggler d-lg-none" href="javascript:void(0);" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
@@ -27,6 +31,12 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">
+                    <li>
+                        <a class="dropdown-item" routerLink="weather" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
+                            <span jhiTranslate="global.menu.entities.weathersampleWeather">Weather</span>
+                        </a>
+                    </li>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </ul>
             </li>
@@ -155,4 +165,6 @@
             </li>
         </ul>
     </div>
-</nav>
+
+</mat-toolbar>
+<!--</nav>-->
