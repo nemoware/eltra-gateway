@@ -1,22 +1,26 @@
-import { Component, OnInit, RendererFactory2, Renderer2 } from '@angular/core';
+import { Component, OnInit, RendererFactory2, Renderer2, ViewChild, AfterViewInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router, ActivatedRouteSnapshot, NavigationEnd, NavigationError } from '@angular/router';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 import { AccountService } from 'app/core/auth/account.service';
+import { MatSidenav } from '@angular/material/sidenav';
+import { SidenavService } from 'app/layouts/main/sidenav.service';
 
 @Component({
   selector: 'jhi-main',
   templateUrl: './main.component.html'
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit, AfterViewInit {
   private renderer: Renderer2;
+  @ViewChild('snavpanel', { static: false }) public sidenav!: MatSidenav;
 
   constructor(
     private accountService: AccountService,
     private titleService: Title,
     private router: Router,
     private translateService: TranslateService,
+    private sidenavService: SidenavService,
     rootRenderer: RendererFactory2
   ) {
     this.renderer = rootRenderer.createRenderer(document.querySelector('html'), null);
@@ -56,5 +60,9 @@ export class MainComponent implements OnInit {
       pageTitle = 'global.title';
     }
     this.translateService.get(pageTitle).subscribe(title => this.titleService.setTitle(title));
+  }
+
+  ngAfterViewInit(): void {
+    this.sidenavService.setSidenav(this.sidenav);
   }
 }

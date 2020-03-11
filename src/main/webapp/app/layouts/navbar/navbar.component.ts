@@ -10,6 +10,7 @@ import { AccountService } from 'app/core/auth/account.service';
 import { LoginModalService } from 'app/core/login/login-modal.service';
 import { LoginService } from 'app/core/login/login.service';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
+import { SidenavService } from 'app/layouts/main/sidenav.service';
 
 @Component({
   selector: 'jhi-navbar',
@@ -30,6 +31,7 @@ export class NavbarComponent implements OnInit {
     private accountService: AccountService,
     private loginModalService: LoginModalService,
     private profileService: ProfileService,
+    private sidenavService: SidenavService,
     private router: Router
   ) {
     this.version = VERSION ? (VERSION.toLowerCase().startsWith('v') ? VERSION : 'v' + VERSION) : '';
@@ -71,5 +73,9 @@ export class NavbarComponent implements OnInit {
 
   getImageUrl(): string {
     return this.isAuthenticated() ? this.accountService.getImageUrl() : '';
+  }
+
+  toggleSidenav(): void {
+    this.sidenavService.toggle();
   }
 }
