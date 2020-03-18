@@ -37,15 +37,15 @@
     },
     "form": {
       "username.label": "Логин",
-      "username.placeholder": "Ваш логин",
+      "username.placeholder": "Логин",
       "currentpassword.label": "Текущий пароль",
       "currentpassword.placeholder": "Текущий пароль",
-      "newpassword.label": "Новый пароль",
-      "newpassword.placeholder": "Новый пароль",
-      "confirmpassword.label": "Подтверждение нового пароля",
-      "confirmpassword.placeholder": "Подтвердите новый пароль",
+      "newpassword.label": "Пароль",
+      "newpassword.placeholder": "Пароль",
+      "confirmpassword.label": "Подтверждение пароля",
+      "confirmpassword.placeholder": "Подтвердите пароль",
       "email.label": "Email",
-      "email.placeholder": "Ваш email"
+      "email.placeholder": "E-mail"
     },
     "messages": {
       "info": {

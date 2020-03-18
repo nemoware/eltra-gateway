@@ -11,9 +11,12 @@ import { PasswordResetInitComponent } from './password-reset/init/password-reset
 import { PasswordResetFinishComponent } from './password-reset/finish/password-reset-finish.component';
 import { SettingsComponent } from './settings/settings.component';
 import { accountState } from './account.route';
+import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  imports: [EltraGatewaySharedModule, RouterModule.forChild(accountState)],
+  imports: [EltraGatewaySharedModule, RouterModule.forChild(accountState), MatInputModule, MatFormFieldModule, MatButtonModule],
   declarations: [
     ActivateComponent,
     RegisterComponent,
