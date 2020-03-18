@@ -72,7 +72,7 @@ describe('Component Tests', () => {
           spyOn(service, 'update').and.returnValue(of(new HttpResponse({ status: 200 })));
 
           // WHEN
-          comp.setActive(user, true);
+          comp.setActive(new Event('click'), user, true);
           tick(); // simulate async
 
           // THEN
