@@ -1,15 +1,13 @@
 <mat-card>
-    <a mat-button class="float-right" (click)="refresh()" [disabled]="updatingRoutes">
+    <a mat-raised-button class="float-right" (click)="refresh()" [disabled]="updatingRoutes">
         <fa-icon icon="sync"></fa-icon> <span jhiTranslate="gateway.refresh.button">Refresh</span>
     </a>
     <mat-card-header>
         <mat-card-title>
-            <h2>
-                <span id="gateway-page-heading" jhiTranslate="gateway.title">Gateway</span>
-            </h2>
+            <span id="gateway-page-heading" jhiTranslate="gateway.title">Gateway</span>
         </mat-card-title>
-        <mat-card-subtitle>
-            <h3 jhiTranslate="gateway.routes.title">Current routes</h3>
+        <mat-card-subtitle jhiTranslate="gateway.routes.title">
+            Current routes
         </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>

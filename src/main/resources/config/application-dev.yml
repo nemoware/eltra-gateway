@@ -87,6 +87,8 @@ spring:
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
+    database-change-log-table: gateway_databasechangelog
+    database-change-log-lock-table: gateway_databasechangeloglock
   mail:
     host: localhost
     port: 25
