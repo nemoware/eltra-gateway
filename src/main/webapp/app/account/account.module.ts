@@ -14,9 +14,17 @@ import { accountState } from './account.route';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  imports: [EltraGatewaySharedModule, RouterModule.forChild(accountState), MatInputModule, MatFormFieldModule, MatButtonModule],
+  imports: [
+    EltraGatewaySharedModule,
+    RouterModule.forChild(accountState),
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatCardModule
+  ],
   declarations: [
     ActivateComponent,
     RegisterComponent,
