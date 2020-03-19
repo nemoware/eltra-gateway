@@ -11,7 +11,7 @@ import { TrackerActivity } from 'app/core/tracker/tracker-activity.model';
 export class TrackerComponent implements OnInit, OnDestroy {
   activities: TrackerActivity[] = [];
   subscription?: Subscription;
-
+  displayedColumns: string[] = ['login', 'ip', 'page', 'time'];
   constructor(private trackerService: TrackerService) {}
 
   showActivity(activity: TrackerActivity): void {
